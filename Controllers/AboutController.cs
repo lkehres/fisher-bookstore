@@ -12,15 +12,15 @@ namespace Fisher.Bookstore.Controllers
     {
         public IActionResult Index()
         {
-            return Content("This is about controller's Index action");
+            return View();
         }
          public IActionResult History()
         {
-            return Content("This is about controller's History action");
+            return View();
         }
          public IActionResult Location()
         {
-            return Content("This is about controller's Location action");
+            return View();
         }
     }
 }

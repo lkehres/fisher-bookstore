@@ -12,11 +12,11 @@ namespace Fisher.Bookstore.Controllers
     {
         public IActionResult Index()
         {
-            return Content("books controller Index default");
+            return View();
         }
         public IActionResult New()
         {
-            return Content("books controller New");
+            return View();
         }
     }
 }
