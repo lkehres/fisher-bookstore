@@ -1,7 +1,32 @@
 @page
+@using Fisher.Bookstore.Pages
+@model Books
 
 @{
     ViewData["Title"] = "Books page";
 }
 
-<p>This is the books page.</p>
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Books Currently in Stock</h2>
+        <h3>Last update: @(System.DateTime.Now)</h3>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model.books)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
